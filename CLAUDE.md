@@ -2,36 +2,43 @@
 
 ## Project Overview
 
-**MiFamilia479** is a newly initialized repository owned by GummyBear479. The project is in its early stages with no source code, build system, or dependencies configured yet. This file serves as the foundational guide for AI assistants contributing to this repository.
+**MiFamilia479** is a personal portfolio website built with Next.js, owned by GummyBear479. The site showcases projects and provides contact information.
 
 ## Repository Structure
 
 ```
 MiFamilia479/
-├── CLAUDE.md          # AI assistant guide (this file)
-├── README.md          # Project documentation
-└── .git/              # Git metadata
+├── CLAUDE.md              # AI assistant guide (this file)
+├── README.md              # Project documentation
+├── package.json           # Node.js dependencies and scripts
+├── tsconfig.json          # TypeScript configuration
+├── next.config.ts         # Next.js configuration
+├── postcss.config.mjs     # PostCSS / Tailwind CSS configuration
+├── public/                # Static assets (images, icons, etc.)
+└── src/
+    └── app/
+        ├── globals.css    # Global styles (Tailwind CSS)
+        ├── layout.tsx     # Root layout component
+        └── page.tsx       # Homepage (hero, about, projects, contact)
 ```
-
-As the project grows, this section should be updated to reflect the actual directory layout (e.g., `src/`, `tests/`, `docs/`, `config/`).
 
 ## Development Setup
 
-No build system or package manager is currently configured. When one is added, document the setup steps here:
-
-- **Prerequisites:** (e.g., Node.js >= 18, Python 3.11+, etc.)
-- **Install dependencies:** (e.g., `npm install`, `pip install -r requirements.txt`)
-- **Run development server:** (TBD)
-- **Run tests:** (TBD)
-- **Build for production:** (TBD)
+- **Prerequisites:** Node.js >= 18
+- **Install dependencies:** `npm install`
+- **Run development server:** `npm run dev` (opens at http://localhost:3000)
+- **Build for production:** `npm run build`
+- **Start production server:** `npm start`
+- **Lint:** `npm run lint`
 
 ## Key Commands
 
-No scripts or commands are configured yet. Update this section as they are added:
-
-| Command | Description |
-|---------|-------------|
-| TBD     | TBD         |
+| Command         | Description                        |
+|-----------------|------------------------------------|
+| `npm run dev`   | Start development server           |
+| `npm run build` | Build for production               |
+| `npm start`     | Start production server            |
+| `npm run lint`  | Run ESLint                         |
 
 ## Code Conventions
 
@@ -44,40 +51,29 @@ No scripts or commands are configured yet. Update this section as they are added
 
 ### Style Guidelines
 
-No linter or formatter is configured yet. When established, document:
-
-- Language-specific style rules
-- Linting tool and configuration file location
-- Formatting tool and configuration file location
-- Pre-commit hooks if any
+- **Language:** TypeScript (strict mode)
+- **Framework:** Next.js 16 with App Router
+- **Styling:** Tailwind CSS v4
+- **Linting:** ESLint via `next lint`
 
 ## Architecture
 
-No architecture decisions have been made yet. As the project develops, document:
-
-- Tech stack choices and rationale
-- High-level architecture patterns (e.g., MVC, microservices, monorepo)
-- Key modules and their responsibilities
-- Data flow and state management approach
-- External service integrations
+- **Tech stack:** Next.js, React, TypeScript, Tailwind CSS
+- **Pattern:** Next.js App Router with server components by default
+- **Pages:** Single-page portfolio with section-based navigation
+- **Styling:** Utility-first CSS with Tailwind; dark mode via `prefers-color-scheme`
 
 ## Testing
 
-No testing framework is configured. When added, document:
+No testing framework is configured yet. When added, document:
 
 - Testing framework and runner
-- Test file naming conventions (e.g., `*.test.ts`, `*_test.py`)
-- Test directory structure
-- How to run the full test suite vs individual tests
-- Coverage requirements
+- Test file naming conventions
+- How to run tests
 
 ## CI/CD
 
-No CI/CD pipelines are configured. When added, document:
-
-- Pipeline configuration file locations
-- Build and deploy stages
-- Required checks before merging
+No CI/CD pipelines are configured yet.
 
 ## Important Notes for AI Assistants
 
