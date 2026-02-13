@@ -51,7 +51,7 @@ MiFamilia479/
 
 ### Style Guidelines
 
-- **Language:** TypeScript (strict mode)
+- **Language:** TypeScript (strict mode). Use TypeScript for all new files. Prefer `.tsx` for components and `.ts` for utilities.
 - **Framework:** Next.js 16 with App Router
 - **Styling:** Tailwind CSS v4
 - **Linting:** ESLint via `next lint`
@@ -74,6 +74,11 @@ No testing framework is configured yet. When added, document:
 ## CI/CD
 
 No CI/CD pipelines are configured yet.
+
+## Workflow Rules
+
+- After scaffolding or modifying project files, always verify the build succeeds by running `npm run build` before reporting completion.
+- When creating multi-file changes, use TodoWrite to plan the full set of files before writing any of them, then check off each item as completed.
 
 ## Important Notes for AI Assistants
 
