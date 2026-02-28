@@ -553,7 +553,7 @@ export default function DignityProtocolOS() {
       setLoading(true);
       setResponse('');
       try {
-        const apiKey = "";
+        const apiKey = import.meta.env.VITE_GOOGLE_API_KEY || "";
         const response = await fetch(
           `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`,
           {
@@ -582,7 +582,7 @@ export default function DignityProtocolOS() {
       setInput1('');
 
       try {
-        const apiKey = "";
+        const apiKey = import.meta.env.VITE_GOOGLE_API_KEY || "";
         const systemPrompt = "You are the Sovereign Guide for La Familia 479. Your goal is to help families move from 'Perishable' to 'Sovereign'. You are empathetic, knowledgeable about the Dignity Protocol (Waste-to-Asset conversion), and practical. Answer questions about the Land Trust, financial defense, or community healing.";
 
         const prompt = `${systemPrompt}\n\nCurrent conversation:\n${newHistory.map(m => `${m.role}: ${m.text}`).join('\n')}\n\nassistant:`;
@@ -617,7 +617,7 @@ export default function DignityProtocolOS() {
 
       setLoading(true);
       try {
-        const apiKey = "";
+        const apiKey = import.meta.env.VITE_GOOGLE_API_KEY || "";
         const prompt = `Translate the following text into Spanish. Maintain a dignified, warm, and professional tone suitable for community members of La Familia 479:\n\n"${textToTranslate}"`;
 
         const res = await fetch(
@@ -648,7 +648,7 @@ export default function DignityProtocolOS() {
     const callGeminiTTS = async (textToRead) => {
       if (!textToRead) return;
       try {
-        const apiKey = "";
+        const apiKey = import.meta.env.VITE_GOOGLE_API_KEY || "";
         const response = await fetch(
           `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`,
           {
@@ -688,7 +688,7 @@ export default function DignityProtocolOS() {
       setLoading(true);
       setGeneratedImageUrl('');
       try {
-        const apiKey = "";
+        const apiKey = import.meta.env.VITE_GOOGLE_API_KEY || "";
         const response = await fetch(
           `https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=${apiKey}`,
           {
